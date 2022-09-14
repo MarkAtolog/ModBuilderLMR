@@ -33,6 +33,12 @@ public class ModBuilder : MonoBehaviour
         BuildMod("linux", BuildTarget.StandaloneLinux64);
     }
 
+    [MenuItem("Mods/Build for Mac")]
+    public static void ReleaseMac()
+    {
+        BuildMod("mac", BuildTarget.StandaloneOSX);
+    }
+
     private static void BuildMod(string platform, BuildTarget targetPlatform)
     {
         Directory.CreateDirectory(ModsFolderName);
