@@ -64,7 +64,7 @@ public class ModBuilder : MonoBehaviour
         buildMap[0].assetNames = assetNames;
         buildMap[0].addressableNames = addressableNames;
 
-        BuildPipeline.BuildAssetBundles(ModsFolderName, buildMap, BuildAssetBundleOptions.None, targetPlatform);
+        BuildPipeline.BuildAssetBundles(ModsFolderName, buildMap, BuildAssetBundleOptions.AssetBundleStripUnityVersion, targetPlatform);
 
         DeleteRedundantFiles();
     }
